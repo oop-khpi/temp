@@ -24,7 +24,6 @@ public class Library {
 	}
 
 	public Library(String isbn, String name, String authors, String publisher, String genre, String date) {
-		super();
 		this.isbn = isbn;
 		this.name = name;
 		this.authors = authors;
