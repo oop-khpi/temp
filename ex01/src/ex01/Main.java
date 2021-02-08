@@ -1,5 +1,7 @@
 package ex01;
 
+import java.util.Arrays;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -12,8 +14,14 @@ public class Main {
 				new Library("3282849494", "name2", "author2", "publisher2", "genre2", "date2"),
 				new Library("9494873772", "name3", "author3", "publisher3", "genre1", "date3") };
 		
-		System.out.println(array);
-
+		System.out.println(Arrays.toString(array));
+		System.out.println("---");
+		LibraryContainer container = new LibraryContainer();
+		container.add(library);
+		for (Library lib : array) {
+			container.add(lib);
+		}
+		System.out.println(container);
 		System.out.println("Done.");
 	}
 
