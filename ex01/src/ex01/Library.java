@@ -19,8 +19,8 @@ public class Library {
 
 	@Override
 	public String toString() {
-		return "Library [isbn=" + isbn + ", name=" + name + ", authors=" + authors + ", publisher=" + publisher
-				+ ", genre=" + genre + ", date=" + date + "]";
+		return "Library:\n\tisbn = " + isbn + "\n\tname = " + name + "\n\tauthors = " + authors + "\n\tpublisher = "
+				+ publisher + "\n\tgenre = " + genre + "\n\tdate = " + date;
 	}
 
 	public Library(String isbn, String name, String authors, String publisher, String genre, String date) {
