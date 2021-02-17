@@ -26,23 +26,13 @@ public class Main {
 		System.out.print(container);
 		System.out.println("---");
 		container.sort(new Comparator<Library>() {
-
-			@Override
 			public int compare(Library o1, Library o2) {
 				return o2.getIsbn().compareTo(o1.getIsbn());
 			}
-			
 		});
 		System.out.println(container);
 		System.out.println("---");
-		sort(container, new Comparator<Library>() {
-
-			@Override
-			public int compare(Library o1, Library o2) {
-				return o1.getName().compareTo(o2.getName());
-			}
-			
-		});
+		sort(container, (o1, o2) -> o1.getName().compareTo(o2.getName()));
 		System.out.println(container);
 		System.out.println("Done.");
 	}
