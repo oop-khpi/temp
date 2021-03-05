@@ -1,5 +1,6 @@
 package ex02;
 
+//import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -17,6 +18,7 @@ public class Container<E> {
 		array[array.length - 1] = data;
 	}
 
+	// It works, but it is not enough.
 	public E remove(int index) {
 		@SuppressWarnings("unchecked")
 		E removed = (E) array[index];
@@ -41,6 +43,16 @@ public class Container<E> {
 		System.arraycopy(array, 0, a, 0, array.length);
 		return a;
 	}
+
+	// It works too.
+//	@SuppressWarnings("unchecked")
+//	public <T> T[] toArray(T[] a) {
+//		if (a.length < array.length) {
+//			a = (T[]) Array.newInstance(a.getClass().getComponentType(), array.length);
+//		}
+//		System.arraycopy(array, 0, a, 0, array.length);
+//		return a;
+//	}
 
 	@Override
 	public String toString() {
