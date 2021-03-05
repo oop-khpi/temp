@@ -6,7 +6,7 @@ import java.util.Comparator;
 public class Main {
 
 	public static void main(String[] args) {
-		// See: ArrayList, Collections, Arrays, System.
+		// See: ArrayList, List, Collection, Comparable, Iterable, Collections, Arrays, System.
 		System.out.println("Begin...");
 		Library library = new Library("1234567890", "no name", "no author", "a-ba-ba-ha-la-ma-ha", "pulp fiction",
 				"08/02/2021");
