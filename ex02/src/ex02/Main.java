@@ -36,7 +36,7 @@ public class Main {
 		System.out.println(container);
 		System.out.println("--- 5");
 		for (Library x : container.toArray(new Library[0])) {
-			System.out.println(x + " <- " + x.getIsbn().matches("^(9).*\\1$"));
+			System.out.println(x + " <- " + x.getIsbn().matches(".*(4).*\\1.*"));
 		}
 		System.out.println("--- 6");
 		Library xxx = container.remove(3);
