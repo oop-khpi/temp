@@ -32,13 +32,13 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		System.out.println("Begin...");
+
 		System.out.println("CPU count: " + Runtime.getRuntime().availableProcessors());
 		int[] array = new Random().ints(100_000_000, -1, 2).toArray();
 		System.out.println("Array length: " + array.length);
 		System.out.println("---");
 
 		for (int repeatCounter = 1; repeatCounter < REP_NUMBER; ++repeatCounter) {
-
 			ExecutorService es = Executors.newFixedThreadPool(4);
 			// ExecutorService es = Executors.newSingleThreadExecutor();
 			// ExecutorService es = Executors.newCachedThreadPool();
@@ -67,7 +67,5 @@ public class Main {
 		}
 
 		System.out.println("Done.");
-
 	}
-
 }

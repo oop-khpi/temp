@@ -4,7 +4,6 @@ import java.util.Random;
 
 import util.ArrayUtil;
 
-/**************************************************************/
 abstract class Task implements Runnable {
 	protected int[] array;
 	protected int result;
@@ -57,7 +56,6 @@ class findMaxTask extends Task {
 		result = ArrayUtil.findMax(array);
 	}
 }
-/**************************************************************/
 
 public class Main {
 
@@ -65,6 +63,7 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Begin...");
+
 		int[] array = new Random().ints(100_000_000, -1, 2).toArray();
 		System.out.println("CPU count: " + Runtime.getRuntime().availableProcessors());
 		System.out.println("Array length: " + array.length);
@@ -108,7 +107,7 @@ public class Main {
 			System.out.printf("Time: %g\n", elapsedNanos / 1_000_000.0);
 			System.out.println("---");
 		}
+
 		System.out.println("Done.");
 	}
-
 }
